@@ -13,6 +13,6 @@ namespace Experiment.ServiceInterfaces.Base
         T Find(int id);
         void Insert(T entity);
         void Update(T entity);
-        void Delete(T entity);
+        void Delete(int id);
     }
 }
