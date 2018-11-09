@@ -235,6 +235,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Experiment.InfrastructureServices\Experiment.InfrastructureServices.csproj">
+      <Project>{B5823FCF-6D42-4350-B6A3-22DE4BCF18A6}</Project>
+      <Name>Experiment.InfrastructureServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Experiment.ServiceInterfaces\Experiment.ServiceInterfaces.csproj">
+      <Project>{02554D40-10CE-4EAF-B5C4-45A6962725D5}</Project>
+      <Name>Experiment.ServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

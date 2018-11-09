@@ -1,3 +1,5 @@
+using Experiment.InfrastructureServices;
+using Experiment.ServiceInterfaces;
 using System;
 
 using Unity;
@@ -42,6 +44,11 @@ namespace Experiment_ASP.NET
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<ICourseService, CourseService>();
+            container.RegisterType<IDepartmentService, DepartmentService>();
+            container.RegisterType<ISemesterService, SemesterService>();
+            container.RegisterType<StudentService, StudentService>();
         }
     }
 }
