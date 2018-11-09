@@ -12,6 +12,7 @@ namespace Experiment.Entities.Base
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
         public int Id { get; set; }
 
         [Column(TypeName = "datetime2")]
@@ -21,6 +22,8 @@ namespace Experiment.Entities.Base
         public DateTime UpdatedDate { get; set; }
 
         public bool IsDelete { get; set; }
+
+        [Required]
         public int Name { get; set; }
     }
 }

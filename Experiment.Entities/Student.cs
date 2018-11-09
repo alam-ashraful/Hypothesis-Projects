@@ -1,6 +1,7 @@
 ﻿using Experiment.Entities.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,10 @@ namespace Experiment.Entities
         public DateTime BirthDate { get; set; }
         public float CGPA { get; set; }
 
-        [ForeignKey("DepartmentId")]
+        [Required(ErrorMessage = "Without department student cann't be create.")]
         public int DepartmentId { get; set; }
 
-        [ForeignKey("CourseId")]
         public int CourseId { get; set; }
-
-        [ForeignKey("SemesterId")]
         public int SemesterId { get; set; }
     }
 }
