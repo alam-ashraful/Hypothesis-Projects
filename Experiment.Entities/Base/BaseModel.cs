@@ -24,6 +24,6 @@ namespace Experiment.Entities.Base
         public bool IsDelete { get; set; }
 
         [Required]
-        public int Name { get; set; }
+        public string Name { get; set; }
     }
 }
