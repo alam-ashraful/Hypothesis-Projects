@@ -19,5 +19,7 @@ namespace Experiment.Entities
 
         public int CourseId { get; set; }
         public int SemesterId { get; set; }
+
+        public ICollection<Department> department { get; set; }
     }
 }
