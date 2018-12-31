@@ -4,7 +4,7 @@
     ViewBag.Title = "GetAllDepartment";
 }
 
-<h2>GetAllDepartment</h2>
+<h2>Departments List</h2>
 
 <p>
     @Html.ActionLink("Create New", "AddDepartment")
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Location)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Edit", "UpdateDepartment", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Delete", "DeleteDepartment", new { id=item.Id })
         </td>
     </tr>
 }

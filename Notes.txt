@@ -5,10 +5,12 @@ Required packages info in different projects
 
 Experiment.Data,
 Experiment.InfrastructureService,
-Experiment.ServiceInterfaces
+Experiment.ServiceInterfaces {
 	Entity Framework > Required
+}
 
-Experiment ASP.NET
+Experiment ASP.NET {
 	Unity.MVC
+}
 
-<!--
+*Sets > AutomaticMigrationsEnabled = true;
