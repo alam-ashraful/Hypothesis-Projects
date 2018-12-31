@@ -1,0 +1,14 @@
+
+/*
+Required packages info in different projects
+*/
+
+Experiment.Data,
+Experiment.InfrastructureService,
+Experiment.ServiceInterfaces
+	Entity Framework > Required
+
+Experiment ASP.NET
+	Unity.MVC
+
+<!--

@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiment.ServiceInterface
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experiment.InfrastructureServices", "Experiment.InfrastructureServices\Experiment.InfrastructureServices.csproj", "{B5823FCF-6D42-4350-B6A3-22DE4BCF18A6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CF required packages", "CF required packages", "{FBEEBE2E-D8DF-4163-AFD8-33A63B506BFD}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
