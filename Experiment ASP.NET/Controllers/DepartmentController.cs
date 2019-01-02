@@ -34,6 +34,7 @@ namespace Experiment_ASP.NET.Controllers
         {
             if (department != null)
             {
+                ViewBag.al = Request.UrlReferrer.ToString();
                 department.CreatedDate = DateTime.UtcNow;
                 department.UpdatedDate = DateTime.UtcNow;
                 _departmentService.Insert(department);

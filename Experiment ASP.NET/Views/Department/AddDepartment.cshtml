@@ -62,6 +62,19 @@
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
+
+        <div>
+            @{
+                string msg = "Nothing";
+                if (ViewBag.al != null)
+                {
+                    @ViewBag.al
+                }else
+                {
+                    @msg
+                }
+            }
+        </div>
     </div>
 }
 
