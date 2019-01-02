@@ -7,10 +7,10 @@
 <h2>AddDepartment</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Department</h4>
         <hr />
@@ -65,13 +65,19 @@
 
         <div>
             @{
-                string msg = "Nothing";
-                if (ViewBag.al != null)
+                string[] msg = { "Previous: ", "Current: " };
+
+                if (@ViewBag.al != null)
                 {
-                    @ViewBag.al
-                }else
+                    @ViewBag.al;
+                }
+                else
                 {
-                    @msg
+                    var getCurrentUrlRequest = Request.Url != null ? Request.Url.ToString() : "";
+                    if (getCurrentUrlRequest != string.Empty)
+                    {
+                        @getCurrentUrlRequest;
+                    }
                 }
             }
         </div>

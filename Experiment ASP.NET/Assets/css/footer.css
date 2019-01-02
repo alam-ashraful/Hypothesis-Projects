@@ -1,0 +1,8 @@
+﻿.footer_container p {
+    display: inline-block;
+}
+
+    .footer_container p a {
+        text-decoration: none;
+        color: #05b404;
+    }
