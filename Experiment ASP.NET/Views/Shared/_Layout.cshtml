@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
     <link rel="stylesheet" href="~/Assets/css/footer.css" />
 </head>
 <body>
@@ -33,7 +34,7 @@
         <hr />
         <footer class="footer_container">
             <p>&copy; @DateTime.Now.Year - UMS</p>
-            <p>@Html.RouteLink("GitHub", new { }, new { href = "https://github.com/jameahmed/Hypothesis-Projects", target="_blank" })</p>
+            <p>@Html.RouteLink("GitHub", new { }, new { href = "https://github.com/jameahmed/Hypothesis-Projects", target = "_blank" })</p>
             <p>@Html.RouteLink("About me", new { }, new { href = "https://www.facebook.com/ashrafuldotinfo", target = "_blank" })</p>
         </footer>
     </div>
