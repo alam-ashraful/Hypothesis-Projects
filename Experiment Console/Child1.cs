@@ -8,7 +8,7 @@ namespace Experiment_Console
     {
         protected override void PrintParent(string value)
         {
-            Console.WriteLine("Child 1, {0}", value);
+            Console.WriteLine("{0} from {1}", value, this.GetType().BaseType.Name);
         }
     }
 }
