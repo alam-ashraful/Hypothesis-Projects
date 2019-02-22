@@ -64,12 +64,8 @@ namespace Experiment_ASP.NET.Controllers
         [HttpGet]
         public ActionResult Serial(string letterCase)
         {
-            var tokens = "UNKNOWN";
-            if(letterCase == "lower")
-            {
-                return Content(tokens.ToLower());
-            }
-            return Content(tokens);
+            var tokens = "SERIAL NUMBER";
+            return Content(letterCase =="lower" ? string.Format("tokens: {0}<br />letterCase: {1}", tokens.ToLower(), letterCase) : tokens);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Experiment_ASP.NET
 
             routes.MapRoute(
                 name: "Serial Number",
-                url: "{Serial}/{letterCase}",
+                url: "{Serial}/{action}/{letterCase}",
                 defaults: new { controller = "Home", action = "Serial", letterCase = "upper" }
             );
 
