@@ -53,5 +53,23 @@ namespace Experiment_ASP.NET.Controllers
             ViewBag.VDepartmentName = dept1.Name;
             return View(student1);
         }
+
+        [HttpGet]
+        public ActionResult TestIndex()
+        {
+            return Content(string.Format("Action name: {0}<br />Controller name: {1}", this.ControllerContext.RouteData.Values["action"].ToString(),
+                this.ControllerContext.RouteData.Values["controller"].ToString()));
+        }
+
+        [HttpGet]
+        public ActionResult Serial(string letterCase)
+        {
+            var tokens = "UNKNOWN";
+            if(letterCase == "lower")
+            {
+                return Content(tokens.ToLower());
+            }
+            return Content(tokens);
+        }
     }
 }
