@@ -13,19 +13,17 @@ namespace Experiment_ASP.NET
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Serial Number",
-                url: "{Serial}/{action}/{letterCase}",
-                defaults: new { controller = "Home", action = "Serial", letterCase = "upper" }
-            );
+            //routes.MapRoute(
+            //    name: "Serial Number",
+            //    url: "{Serial}/{action}/{letterCase}",
+            //    defaults: new { controller = "Home", action = "Serial", letterCase = "upper" }
+            //);
 
-            routes.MapRoute(
-                name: "Test",
-                url: "{Test}/{action}/{id}",
-                defaults: new { controller = "Home", action = "TestIndex", id = UrlParameter.Optional }
-            );
-
-            
+            //routes.MapRoute(
+            //    name: "Test",
+            //    url: "{Test}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "TestIndex", id = UrlParameter.Optional }
+            //);
 
             routes.MapRoute(
                 name: "Default",
