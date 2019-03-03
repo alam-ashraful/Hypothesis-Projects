@@ -48,7 +48,7 @@ namespace Experiment_ASP.NET
             container.RegisterType<ICourseService, CourseService>();
             container.RegisterType<IDepartmentService, DepartmentService>();
             container.RegisterType<ISemesterService, SemesterService>();
-            container.RegisterType<StudentService, StudentService>();
+            container.RegisterType<IStudentService, StudentService>();
         }
     }
 }

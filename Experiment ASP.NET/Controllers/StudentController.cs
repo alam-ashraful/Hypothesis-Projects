@@ -12,10 +12,12 @@ namespace Experiment_ASP.NET.Controllers
     public class StudentController : Controller
     {
         private readonly IDepartmentService _departmentService;
+        private readonly IStudentService _studentService;
 
-        public StudentController(IDepartmentService departmentService)
+        public StudentController(IDepartmentService departmentService, IStudentService studentService)
         {
             _departmentService = departmentService;
+            _studentService = studentService;
         }
         
         [HttpGet]
@@ -36,10 +38,22 @@ namespace Experiment_ASP.NET.Controllers
         }
 
         [HttpPost, ActionName("CreateStudent")]
-        public ActionResult InsertStudent()
+        public ActionResult InsertStudent(Student student)
         {
-            _departmentService.All();
-            return View();
+            if (student != null)
+            {
+                student.DepartmentId = int.Parse(Request.Form["DropdownListID"]);
+                //return Json(new JavaScriptSerializer().Serialize(student), JsonRequestBehavior.AllowGet);
+                _studentService.Insert(student);
+                return RedirectToAction("StudentsList", "Student");
+            }
+            return RedirectToAction(Request.Url.AbsolutePath);
+        }
+
+        [HttpGet]
+        public ActionResult StudentsList()
+        {
+            return View(model: _studentService.All());
         }
     }
 }
