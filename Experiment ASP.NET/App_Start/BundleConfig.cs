@@ -25,6 +25,10 @@ namespace Experiment_ASP.NET
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/youruniquename").Include(
+            "~/Assets/css/footer.css"
+                ));
         }
     }
 }

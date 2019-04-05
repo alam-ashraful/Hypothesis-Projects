@@ -67,5 +67,20 @@ namespace Experiment_ASP.NET.Controllers
             var tokens = "SERIAL NUMBER";
             return Content(letterCase =="lower" ? string.Format("tokens: {0}<br />letterCase: {1}", tokens.ToLower(), letterCase) : tokens);
         }
+
+        [HttpGet]
+        public ActionResult SessionTest()
+        {
+            Session["name"] = "Jame";
+            Session["id"] = 15289901;
+
+            Session.Clear();
+
+            if (Session != null)
+            {
+                return Content(string.Format("Name: {0}<br />ID: {1}", Session[0], Session[1]));
+            }
+            return Content("Session hasn't set yet!");
+        }
     }
 }
